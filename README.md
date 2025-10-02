@@ -1,17 +1,92 @@
-# 💫 About Me:
-I'm a student
+# 🎓 Student Grade Predictor
 
-
-## 🌐 Socials:
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/https://www.linkedin.com/in/bhoomika-v-6194a0352/) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:bhoomikav618@gmail.com) 
-
-# 💻 Tech Stack:
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=flat-square&logo=css3&logoColor=white) ![C](https://img.shields.io/badge/c-%2300599C.svg?style=flat-square&logo=c&logoColor=white) ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=flat-square&logo=c%2B%2B&logoColor=white) ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=flat-square&logo=openjdk&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=flat-square&logo=html5&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=flat-square&logo=javascript&logoColor=%23F7DF1E) ![Python](https://img.shields.io/badge/python-3670A0?style=flat-square&logo=python&logoColor=ffdd54) ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=flat-square&logo=php&logoColor=white) ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=flat-square&logo=firebase) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=flat-square&logo=react&logoColor=%2361DAFB) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=flat-square&logo=mysql&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=flat-square&logo=Matplotlib&logoColor=black) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=flat-square&logo=numpy&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=flat-square&logo=pandas&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=flat-square&logo=scikit-learn&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=flat-square&logo=github&logoColor=white)
-# 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=Bhoomika618&theme=vue-dark&hide_border=false&include_all_commits=true&count_private=true)<br/>
-![](https://nirzak-streak-stats.vercel.app/?user=Bhoomika618&theme=vue-dark&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=Bhoomika618&theme=vue-dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
+A **web-based application** that predicts the grade of a student based on their **Math**, **Reading**, and **Writing** scores. The predicted grade is displayed in a **color-coded card**, making it easy to visualize. This project is built using **Python**, **Flask**, and **scikit-learn**.
 
 ---
-[![](https://visitcount.itsvg.in/api?id=Bhoomika618&icon=0&color=0)](https://visitcount.itsvg.in)
+
+## 📝 Features
+
+- **Grade Prediction**: Predicts grades (A, B, C, D, F) using Random Forest Classifier.
+- **Color-coded Output**: Each grade is shown in a colored card (A → Green, F → Dark Red).
+- **User-friendly Interface**: Simple HTML/CSS interface for input and results.
+- **Reproducible ML Model**: Model saved with `joblib` and includes label encoder for grade mapping.
+
+---
+## 🗂 Folder Structure
+StudentGradePredictor/
+│
+├── Models/
+│ ├── student_grade_model_labelenc.pkl # Random Forest model with encoded grades
+│ ├── student_grade_model.pkl # Random Forest model (optional)
+│ └── label_encoder.pkl # Label encoder for grades
+│
+├── templates/
+│ └── index.html # Main HTML page
+│
+├── static/
+│ └── style.css # CSS styling for form & cards
+│
+├── app.py # Flask application
+├── requirements.txt # Python dependencies
+└── README.md # Project documentation
+
+1. Technologies Used
+- Python 3.x
+- Flask
+- scikit-learn
+- pandas
+- numpy
+- joblib
+- HTML, CSS
+
+
+ **Installation Instructions:**
+1. **Clone the repository:**
+   ```bash```
+   git init
+   git clone <your-repo-link>
+
+3. **Navigate to the project folder:**
+    cd StudentGradePredictor
+
+4. **Create and activate a virtual environment:**
+    python -m venv venv
+    # Windows
+    venv\Scripts\activate
+    
+    # macOS/Linux
+    source venv/bin/activate
+5.  **Install dependencies:**
+    pip install -r requirements.txt
+
+3. **How to Run**  
+1. Make sure the Models folder contains:
+   - `student_grade_model_labelenc.pkl`
+   - `label_encoder.pkl`
+   - `student_grade_model.pkl` (optional)
+
+2. **Start the Flask server:**
+   ```bash```
+   python app.py
+
+3. **Open your browser and go to:**
+   http://127.0.0.1:5000/
+4. Enter Math, Reading, and Writing marks, then click "Predict Grade".
+    
+4. **How It Works (Brief Explanation)**  
+- The Random Forest model is trained on sample student scores and corresponding grades.
+- Grades are encoded using `LabelEncoder` to convert A, B, C, D, F into numbers for model training.
+- When a user inputs new marks, the model predicts the encoded grade.
+- The LabelEncoder converts the numeric prediction back to the letter grade.
+- The result is displayed in a color-coded card on the webpage.
+
+
+
+
+**Author / Contact**
+**Author**: Bhoomika.V
+**Email:** bhoomikav618@gmail.com
+
+
+
 
